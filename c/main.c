@@ -18,6 +18,13 @@ void printarr(float *arr, size_t len) {
 }
 */
 
+EMSCRIPTEN_KEEPALIVE
+void *malloc(size_t);
+
+EMSCRIPTEN_KEEPALIVE
+void free(void*);
+
+EMSCRIPTEN_KEEPALIVE
 void interpolate(float *res, float *arr, int L, float *indices, float freq, float start, float stop) {
     int i = -1, j =-1;
 
